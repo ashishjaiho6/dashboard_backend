@@ -35,12 +35,12 @@ const usersSchema = new Schema(
       type: Schema.Types.Boolean,
       default: true,
     },
-    role: {
-      type: Schema.Types.ObjectId,
-      ref: 'Role',
-      required: true,
-      index: true,
-    },
+    //     role: {
+    //       type: Schema.Types.ObjectId,
+    //       ref: 'Role',
+    //       required: true,
+    //       index: true,
+    //     },
   },
   {
     collection: 'users',

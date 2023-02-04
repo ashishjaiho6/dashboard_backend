@@ -23,7 +23,7 @@ const roleSchema = new Schema(
     },
   },
   {
-    collection: 'roles',
+    collection: 'energy_data',
     timestamps: true,
   },
 );

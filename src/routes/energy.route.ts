@@ -1,32 +1,18 @@
-// import { Router } from 'express';
-import { getAllEnergy } from 'src/controllers/energy.controller';
-// import { getAllRoles } from 'src/controllers/role.controller';
-
-// const energyRoute = () => {
-//   const router = Router();
-
-//   //   router.get('/energy', getAllRoles);
-
-//   return router;
-// };
-
-// export { energyRoute };
-
 import { Router } from 'express';
-import { createRole, deleteRole, getAllRoles, getRole, updateRole } from '../controllers/role.controller';
+import { createEnergy, getAllEnergies, getEnergy, updateEnergy, deleteEnergy } from '../controllers/energy.controller';
 
 const energyRoute = () => {
   const router = Router();
 
-  router.post('/roles', createRole);
+  router.post('/energy', createEnergy);
 
-  //   router.get('/roles', getAllEnergy);
+  router.get('/energy', getAllEnergies);
 
-  router.get('/roles/:id', getRole);
+  router.get('/energy/:id', getEnergy);
 
-  router.put('/roles/:id', updateRole);
+  router.put('/energy/:id', updateEnergy);
 
-  router.delete('/roles/:id', deleteRole);
+  router.delete('/energy/:id', deleteEnergy);
 
   return router;
 };

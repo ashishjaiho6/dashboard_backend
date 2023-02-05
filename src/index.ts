@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import { connectToDatabase } from './databaseConnection';
-import { roleRoute } from './routes/role.route';
+import { energyRoute } from './routes/energy.route';
 import { userRoute } from './routes/user.route';
 
 dotenv.config();
@@ -13,7 +13,7 @@ const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use('/', roleRoute());
+app.use('/', energyRoute());
 app.use('/', userRoute());
 
 app.get('/', (req, res) => {

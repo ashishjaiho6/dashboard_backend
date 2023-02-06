@@ -1,8 +1,8 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import { connectToDatabase } from './databaseConnection';
-import { energyRoute } from './routes/energy.route';
-import { userRoute } from './routes/user.route';
+import { connectToDatabase } from './src/databaseConnection';
+import { energyRoute } from './src/routes/energy.route';
+import { userRoute } from './src/routes/user.route';
 
 dotenv.config();
 
